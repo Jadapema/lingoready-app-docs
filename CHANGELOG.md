@@ -2,6 +2,21 @@
 
 All notable changes to the mobile app. Dates are release-branch dates.
 
+## [0.3.0] — 2026-07-02
+
+### Added
+- **Catalog ×5:** 10 practice paths (~125 scenarios), 18 scored drills grouped by skill, 10 group practice rooms.
+- **Custom scenario builder** — describe a real situation, get an AI-drafted rehearsal under "Your scenarios".
+- **Per-session options:** length (5/10/15 min), difficulty (Easy/Realistic/Hard), coach speaking speed (0.8×–1.2×).
+- **Hands-free mode:** voice-activity detection ends your turn automatically after a natural pause.
+- In-session **hint button** (whisper-phrase), **live-captions toggle**, and **transcript replay** for any past session.
+- Remote feature flags (`GET /config`) gating new capabilities.
+- Drill catalog screen (all 18, grouped), group-room card on Home.
+
+### Changed
+- Recording switched to a 16 kHz mono speech preset (~4× smaller uploads → faster turns on weak networks) with metering for VAD.
+- Recording now pauses cleanly on phone calls / app switches (AppState handling).
+
 ## [0.2.0] — 2026-07-02
 
 ### Added

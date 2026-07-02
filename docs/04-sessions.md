@@ -1,51 +1,63 @@
 # Sessions & Practice Modes
 
-Everything a user can practice today, how each mode works, and the planned expansions.
+Everything a user can practice today — **6 modes, 125+ catalog scenarios, 18 drills, 10 group rooms, plus unlimited AI-generated custom scenarios** — and the planned expansions.
+
+> **Why users don't repeat themselves:** every 1:1 session is generated live by the coach model (no two conversations are the same), the catalog spans 10 professional situations at 3 difficulty levels and 3 lengths, and the custom-scenario builder turns any real upcoming moment ("my sprint review on Friday") into a rehearsal — effectively infinite content.
 
 ## Current catalog
 
 ### 1 · Live 1:1 scenario sessions (the core)
 
-Role-play with an AI coach in character (interviewer, scrum lead, client…).
+Role-play with an AI coach in character (interviewer, scrum lead, client, negotiator…).
 
 | Property | Value |
 | --- | --- |
-| Content | 38 scenarios across 4 paths: **Interviews** (12) · **Meetings** (10) · **Presentations** (8) · **Small talk** (8) |
-| Modes | **Voice** (dark call UI) and **Chat** (typed) — switchable mid-session |
-| Personalization | Scenario recommendation tuned by profession + goal; coach adapts to the user's CEFR level |
-| Feedback | Post-session report: 0–100 score, per-skill bars, the 2 highest-impact fixes (you said → say), what went well, suggested vocabulary |
+| Content | **125+ scenarios across 10 paths:** 🎯 Interviews (16) · ☀️ Meetings (14) · 📊 Presentations (12) · ☕ Small talk (10) · 💸 Negotiation (12) · 📞 Client calls (13) · 🌡️ Difficult conversations (12) · 🧭 Leadership (12) · 🤝 Networking (10) · 🚀 Career growth (10) |
+| Per-session options | **Length** 5/10/15 min · **Difficulty** Easy/Realistic/Hard (changes coach speed, vocabulary and pushback) · **Coach speed** 0.8×/1×/1.2× |
+| Modes | **Voice** (dark call UI, hands-free VAD optional) and **Chat** (typed) — switchable mid-session |
+| In-session help | 💡 Hint button (a whisper-phrase you could say next) · live captions toggle · barge-in |
+| Personalization | Recommendation tuned by profession + goal; coach adapts to the user's CEFR level |
+| Feedback | Post-session report: 0–100 score, per-skill bars, the 2 highest-impact fixes, what went well, suggested vocabulary — plus full **transcript replay** |
 | Limits | Free: first 3 lessons per path + 20 speaking min/month · Pro: unlimited |
-| Latency posture | STT partials while speaking (Deepgram), LLM reply streams token-by-token, TTS speaks sentence-by-sentence, barge-in interrupts instantly |
+| Latency posture | STT partials while speaking (Deepgram), LLM reply streams token-by-token, TTS speaks sentence-by-sentence |
 
-### 2 · Quick drills (2–5 min)
+### 2 · Custom scenarios (∞)
 
-Targeted reps scored per round with deterministic speech metrics (words/min, filler count, trail-offs) — instant, no LLM cost.
+"Practice **MY** moment": the user describes a real situation in one paragraph; one LLM call drafts a playable scenario (coach persona, win conditions, key phrases). Custom scenarios live under *Your scenarios*, are never plan-locked, and can be rehearsed unlimited times.
 
-| Drill | Focus |
+### 3 · Quick drills (18, scored)
+
+2–5 minute reps scored per round with deterministic speech metrics (wpm, fillers, trail-offs) — instant, no LLM cost. Grouped by skill:
+
+| Group | Drills |
 | --- | --- |
-| 🗣️ Filler words | Zero "um / like / you know" |
-| 🐢 Pacing | Land near 140 wpm |
-| ⏸️ Pause, don't trail off | Firm sentence endings |
-| 🔗 Linking words | "so that", "which means", "whereas" |
-| ⏱️ Past simple vs present perfect | Tense discipline under pressure |
-| 📖 My words | Use your saved vocabulary naturally |
+| Fluency | 🗣️ Filler words · 🐢 Pacing · ⏸️ Pause, don't trail off · ⏳ Thinking-time phrases |
+| Grammar | ⏱️ Past vs present perfect · 🔀 Conditionals · 🧩 Articles & prepositions · ❓ Question formation |
+| Vocabulary & precision | 📖 My words · 🔗 Linking words · 🔢 Numbers & data · 🔤 Spelling & codes |
+| Sound natural | 🎵 Word & sentence stress · ⚖️ Opinions with hedging · 🪞 Active listening & paraphrasing · 📖 Story hooks · ⭐ STAR stories |
 
-### 3 · Group practice rooms
+### 4 · Group practice rooms (10)
 
-Turn-based rooms with AI teammates (scripted personalities), user turns recorded and scored.
+Turn-based rooms with AI teammates; user turns recorded and scored.
 
-| Room | Cast | Skill |
-| --- | --- | --- |
-| ☀️ Team standup | Ana, Tom, Lia | Crisp 60-second updates |
-| 🎤 Panel interview | Sam, Rey, Mei | Holding your thread under rapid follow-ups |
-| 📞 Client meeting | Joe, Pat, Ivy | Pushing back on scope, offering options |
-| ⚖️ Group discussion | Kai, Nia, Leo | Taking positions, building on others |
+| Room | Skill |
+| --- | --- |
+| ☀️ Team standup | Crisp 60-second updates |
+| 🎤 Panel interview | Holding your thread under rapid follow-ups |
+| 📞 Client meeting | Pushing back on scope, offering options |
+| ⚖️ Group discussion | Taking positions, building on others |
+| 💡 Brainstorm session | "Yes, and…" contribution |
+| 🔄 Sprint retrospective | Blameless honest feedback |
+| 📢 All-hands Q&A | Asking sharp questions publicly |
+| 🖥️ Sales demo to a committee | Tailoring answers per stakeholder |
+| 🚨 Incident postmortem | Narrating a timeline without blame |
+| 🥂 Networking mixer | Three strangers, three conversations |
 
-### 4 · Level assessment
+### 5 · Level assessment
 
 4 spoken interview-style questions → CEFR estimate + skill breakdown + takeaways. Free, repeatable, feeds the personalized plan.
 
-### 5 · Writing coach
+### 6 · Writing coach
 
 Paste a draft (Slack / Email / PR review / Proposal), pick a tone (Friendly / Formal / Direct / Concise) → rewrite + up to 3 explained changes.
 
@@ -53,17 +65,7 @@ Paste a draft (Slack / Email / PR review / Proposal), pick a tone (Friendly / Fo
 
 ## Planned expansions (prioritized)
 
-### Tier 1 — high impact, low-to-medium effort
-
-| Option | What it adds | Notes |
-| --- | --- | --- |
-| **Session length choice** | 5 / 10 / 15 min before starting | Server cap already exists; expose it as a user choice |
-| **Difficulty dial** | Easy / Realistic / Hard per session | One line in the system prompt (speed, vocabulary, pushback level) |
-| **Coach speaking speed** | 0.8× / 1× / 1.2× TTS playback | Client-side playback rate — huge for A2/B1 users |
-| **Hints in-session** | "Give me a phrase" button (exists in design) | Cheap side-call to the turn model |
-| **Hands-free mode (VAD)** | Auto-detect end of speech — no tap-to-stop | Silence detection on audio levels; the single biggest conversational-feel win |
-| **Session replay** | Re-read transcript + re-listen to your turns | Transcript already stored; retention toggle covers audio |
-| **Custom scenario** | "Practice MY meeting": user describes the situation, we generate the role prompt | One LLM call to draft `role_prompt` + win conditions |
+> Tier 1 (length/difficulty/speed options, hints, hands-free VAD, replay, custom scenarios) **shipped 2026-07-02**.
 
 ### Tier 2 — differentiators
 
