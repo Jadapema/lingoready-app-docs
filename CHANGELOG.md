@@ -2,6 +2,13 @@
 
 All notable changes to the mobile app. Dates are release-branch dates.
 
+## [0.7.0] — 2026-07-03
+
+### Added
+- **The app UI now speaks 6 languages** — Español, Português, Français, Deutsch and हिन्दी join English, selectable in Settings → App language and applied instantly (no restart). ~460 strings translated across tabs, Home, Practice, Progress, Profile, every settings screen, onboarding, auth, paywall, live sessions, group rooms, drills and feedback. Dates format per language too.
+- Practice **content** (scenarios, drills, coach replies, feedback) intentionally stays in English — practicing English is the product. Anything untranslated falls back to English automatically.
+- Zero new dependencies: a small gettext-style layer (`src/i18n`) keyed by the English source string, reactive through the settings store.
+
 ## [0.6.0] — 2026-07-03
 
 ### Added
