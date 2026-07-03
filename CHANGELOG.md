@@ -2,6 +2,16 @@
 
 All notable changes to the mobile app. Dates are release-branch dates.
 
+## [0.6.0] — 2026-07-03
+
+### Added
+- **Live voice streaming** — the mic now streams raw audio to the server while you speak (`@siteed/expo-audio-studio`, 16 kHz PCM), so transcription is ready the moment you stop and the coach replies noticeably sooner. Live captions update in real time. Falls back to the previous per-turn upload where the native module isn't available; interrupted turns are resent whole after a reconnect. Requires a new dev build (prebuild + pods already synced).
+- **Settings → Voice & speech** — pick the coach voice (with previews for all 11 voices, or keep each coach's own), coach speaking speed, hands-free toggle, and a configurable hands-free pause (Fast 0.7s / Normal 1.1s / Relaxed 1.5s).
+- The scenario brief's "Hear the voice" preview now plays the voice that coach will actually use in the session.
+
+### Changed
+- Session polish: animated speaking halo around the coach avatar while audio plays, typing dots while the coach thinks, and smoother transitions in the live session UI.
+
 ## [0.5.0] — 2026-07-03
 
 ### Added
