@@ -40,15 +40,15 @@ Every API call attaches the Firebase ID token (`Authorization: Bearer`). Users a
 
 ```
 mic (expo-audio) ──binary chunks──► WS /v1/sessions/:id/live
-        ▲                             │ transcript_partial   (live captions)
-        │                             │ transcript_final
-   MicButton tap                      │ assistant_delta      (reply text streams in)
-                                      │ assistant_audio(seq) (sentence-by-sentence TTS)
+        ▲          (turn_start sent   │ transcript_partial   (live captions)
+        │           on mic open —     │ transcript_final
+   MicButton tap    pre-opens STT)    │ assistant_delta      (reply text streams in)
+                                      │ assistant_audio(seq) (clause-by-clause TTS)
 AudioQueue ◄──────────────────────────┘ assistant_text       (turn closed)
 ```
 
-- **`SessionSocket`** — connects, authenticates, reconnects with exponential backoff (max 5), re-auths transparently, queues a turn recorded while offline, then flushes it.
-- **`AudioQueue`** — plays TTS chunks strictly in `seq` order, releases each player after playback, deletes cache files, and `stop()` flushes everything on barge-in.
+- **`SessionSocket`** — connects, authenticates, reconnects with exponential backoff (max 5), re-auths transparently, queues a turn recorded while offline, then flushes it. `turnStart()` fires when recording begins so the server opens its STT connection while the user is still speaking.
+- **`AudioQueue`** — plays TTS chunks strictly in `seq` order (empty chunks advance the sequence without stalling), releases each player after playback, deletes cache files, and `stop()` flushes everything on barge-in.
 - **Barge-in** — tapping the mic during coach speech stops local playback instantly and tells the server to stop queuing TTS for that reply.
 - **Degradation ladder** — streaming STT unavailable → batch STT per turn; socket dies 5× → chat mode; feedback worker slow → polling screen stays friendly.
 

@@ -40,6 +40,14 @@ export default defineConfig({
           { text: 'Changelog', link: '/CHANGELOG' },
         ],
       },
+      {
+        text: 'Legal',
+        items: [
+          { text: 'Terms of Service', link: '/legal/terms' },
+          { text: 'Privacy Policy', link: '/legal/privacy' },
+          { text: 'Open-source licenses', link: '/legal/licenses' },
+        ],
+      },
     ],
     socialLinks: [{ icon: 'github', link: 'https://github.com/Jadapema/lingoready-app' }],
     search: { provider: 'local' },
