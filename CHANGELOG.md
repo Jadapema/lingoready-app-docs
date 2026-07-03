@@ -11,6 +11,8 @@ All notable changes to the mobile app. Dates are release-branch dates.
 
 ### Changed
 - Session polish: animated speaking halo around the coach avatar while audio plays, typing dots while the coach thinks, and smoother transitions in the live session UI.
+- More live-session micro-interactions: the mic glow swells with your actual voice level, hints arrive as a dismissible card instead of a toast, streaming captions get a blinking caret, every control gives press-scale + haptic feedback, and chat bubbles animate in.
+- Group rooms feel alive: the upcoming teammate "types" in the transcript with a pulsing halo on their tile until the line lands, a haptic nudge and breathing highlight strip announce your turn (mic dims while it isn't), a "Transcribing your turn…" chip shows while scoring, and the wrap-up celebrates with a spring animation.
 
 ## [0.5.0] — 2026-07-03
 
