@@ -16,6 +16,8 @@ All notable changes to the mobile app. Dates are release-branch dates.
 - "Pause before replying" (Fast/Normal/Relaxed) now drives the **server's** endpointing pace instead of only the local timer.
 
 ### Fixed
+- **The coach went silent and captions dumped all at once**: with the always-on mic, the speaker's own echo tripped the voice-interrupt detector the moment playback started, killing every reply's audio (and with it the word-by-word caption pacing). Suspected voice interruptions now **duck the volume instead of cutting** until the transcriber confirms real words — a real interruption still cuts the coach off; his echo no longer can. The first 600 ms of playback only *learn* the echo level, and phantom turns recover silently (no more "Didn't catch that" nagging).
+- **Hear any word pronounced**: the in-session dictionary sheet now has a 🔊 button that says the word in your preferred coach voice. Word pronunciations can't voice-open a turn behind the modal.
 - **Hands-free stayed off on older installs**: the setting flipped to on-by-default weeks ago, but persisted stores kept the old value forever — a one-time store migration re-asserts it.
 - **A transient mic failure downgraded the whole session to tap-to-talk**: the live PCM recorder now retries before falling back to file mode, the session screen re-checks the mic permission, and a successful PCM turn automatically re-engages the always-on mic.
 
