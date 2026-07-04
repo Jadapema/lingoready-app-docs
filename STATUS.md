@@ -1,6 +1,6 @@
 # Status
 
-_Last updated: 2026-07-02_
+_Last updated: 2026-07-04_
 
 **Stage: pre-launch.** The app is feature-complete for the MVP scope. Everything below marked 🔑 works in code and activates when its external configuration lands — no further development needed.
 
@@ -35,7 +35,7 @@ _Last updated: 2026-07-02_
 | Chat-mode sessions (switchable mid-session) | ✅ Done | |
 | Post-session feedback report | ✅ Done | Score ring, 2 fixes, did-well, suggested words |
 | Quick drills (6 types), scored per round | ✅ Done | wpm + filler + trail-off metrics, no LLM cost |
-| Group practice rooms (4 formats) | ✅ Done | Simulated AI teammates, scored user turns |
+| Group practice rooms (10 rooms) | ✅ Done | Real multi-agent AI: 3 personas per room, own voices, react to what you said; ends in a feedback report. Scripted offline fallback |
 | Word bank (add, master, filter, drill) | ✅ Done | |
 | Writing coach (channel + tone, explained changes) | ✅ Done | Copy to clipboard |
 | Live transcript partials while speaking | 🔑 Config-gated | Needs `DEEPGRAM_API_KEY` on the API |
@@ -46,9 +46,9 @@ _Last updated: 2026-07-02_
 | --- | --- | --- |
 | Progress dashboard (level, blockers, streak, history) | ✅ Done | |
 | Daily reminder (local notification, tap → Home) | ✅ Done | |
-| Push notifications (FCM token registration) | ✅ Done | Backend sending is an API-side roadmap item |
+| Push notifications (FCM token registration) | ✅ Done | Server sends "report ready" pushes |
 | Dark mode (Light / Dark / System) | ✅ Done | Full token parity |
-| App language selector | ✅ Done | UI copy localization itself is on the roadmap |
+| App language selector + UI in 6 languages | ✅ Done | en/es/pt/fr/de/hi, ~460 strings, applied instantly |
 | Paywall (plans, monthly/annual) | ✅ Done | |
 | Purchases via RevenueCat | 🔑 Config-gated | Needs `EXPO_PUBLIC_REVENUECAT_*` keys + store products |
 | Account, privacy controls, data export, delete account | ✅ Done | Voice retention toggle, 30-day purge honored server-side |
@@ -73,8 +73,7 @@ _Last updated: 2026-07-02_
 
 ## Known limitations
 
-- Group rooms use scripted AI teammates (turn-based simulation), not real multi-party audio.
-- UI copy is English-only; the language selector stores the preference but doesn't localize strings yet (roadmap: i18n).
+- Group rooms are turn-based: a beat plan decides who speaks when (no overlapping free-for-all audio); agent lines themselves are generated live.
 - E2E tests (Maestro) not yet in place — manual test pass required before store submission.
 - No tablet layout; the app targets phones.
 

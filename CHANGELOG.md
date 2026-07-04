@@ -2,6 +2,14 @@
 
 All notable changes to the mobile app. Dates are release-branch dates.
 
+## [0.9.0] — 2026-07-04
+
+### Added
+- **Group rooms went live**: your three AI teammates are now real agents with their own voices — they speak with per-clause streamed audio (captions in sync with playback), react to what you actually said, and hand you the floor with contextual prompts. Finishing a room now produces the same feedback report as a 1:1 session.
+
+### Changed
+- If the room can't be reached (offline / API down), the screen falls back to the previous scripted version automatically.
+
 ## [0.7.0] — 2026-07-03
 
 ### Added

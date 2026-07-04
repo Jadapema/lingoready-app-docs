@@ -54,7 +54,7 @@ session so the minutes count toward streaks.
 
 ### 5 · Group practice rooms (10)
 
-Turn-based rooms with AI teammates; user turns recorded and scored.
+Live multi-agent rooms: three AI participants per room, each a real agent with its own persona, role and voice. The room follows a beat plan — the host opens, agents react (to each other **and to what you actually said**), the floor is handed to you with a prompt, and the host wraps. Ending the room generates a standard feedback report. Offline, rooms fall back to a scripted version.
 
 | Room | Skill |
 | --- | --- |
