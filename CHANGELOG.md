@@ -2,6 +2,19 @@
 
 All notable changes to the mobile app. Dates are release-branch dates.
 
+## [0.10.0] — 2026-07-04
+
+### Added
+- **The voice session got its ChatGPT-style rebuild.** A living **voice orb** replaces the avatar: it breathes while listening, swells with your actual voice while you talk, shimmers with an orbiting mote while the coach thinks, pulses purple while he speaks and dims when paused — you always know whose turn it is without reading anything.
+- **The coach now replies the moment you finish** — turn-taking is server-authoritative: the STT endpointer plus a semantic hold end your turn (a finished sentence answers almost instantly; trailing off mid-thought gives you room to resume). The old client silence timer is now only a fallback.
+- **Real-time corrections**: say "Yesterday I go to the office" and a green card slides in with the corrected sentence and a one-line note in your app language — while the coach is already answering. Corrections are also saved with the session.
+- **Pause button** (deliberately secondary — the orb is the interface): freezes the mic, cuts the coach mid-word, discards a half-spoken turn and stops the session clock. Tap the orb or ▶ to resume.
+- **Interruptions are now configurable** (Settings → Voice & speech → Conversation): leave "Interrupt by speaking" on for real-call barge-in, or turn it off so your voice never cuts the coach — tapping the orb still does.
+
+### Changed
+- Tapping the orb replaces the mic button in hands-free mode (interrupt / hand back the turn); the big mic button remains for tap-to-talk.
+- "Pause before replying" (Fast/Normal/Relaxed) now drives the **server's** endpointing pace instead of only the local timer.
+
 ## [0.9.0] — 2026-07-04
 
 ### Added
@@ -9,6 +22,19 @@ All notable changes to the mobile app. Dates are release-branch dates.
 
 ### Changed
 - If the room can't be reached (offline / API down), the screen falls back to the previous scripted version automatically.
+
+## [0.8.0] — 2026-07-04
+
+### Added
+- **Full automated test suite** (104 tests, jest-expo + React Native Testing Library + MSW): unit tests for the VAD engine, i18n dictionary parity across the 6 languages, daily-plan rotation, AudioQueue ordering, WebSocket client reconnection and the zustand stores; component tests (ScoreRing, SelectList, JargonText, Toast, WordLookup); screen tests for language switch, feedback report, paywall, the full training workout flow and reminders. See [Testing](/docs/09-testing).
+- **Contract tests**: the MSW fixtures used by screen tests are validated against zod mirrors of the API's real response shapes.
+- **Maestro E2E flows** (`.maestro/`): onboarding/login, language switch, drill round, training workout and paywall smoke tests for dev builds.
+- `TESTING.md` with the pre-release **manual on-device checklist** (live PCM mic, echo cancellation/barge-in, audio routing, hands-free VAD, real pushes, RevenueCat sandbox, deep links, offline mode).
+- CI now runs the Jest suite on every push/PR.
+
+### Changed
+- The hands-free VAD decision logic moved from the session screen into `src/lib/vad.ts` (pure, unit-tested state machine) — tuning `BARGE_EXTRA_DB`/`ONSET_CHUNKS_BARGE` now happens against synthetic-dB tests before device testing. Behavior is unchanged.
+- `Toggle` exposes `accessibilityRole="switch"` and `MicButton` a `testID`/label — better a11y and testability.
 
 ## [0.7.0] — 2026-07-03
 

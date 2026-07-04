@@ -27,6 +27,7 @@ export default defineConfig({
         items: [
           { text: 'Architecture', link: '/docs/02-architecture' },
           { text: 'Setup', link: '/docs/05-setup' },
+          { text: 'Testing', link: '/docs/09-testing' },
           { text: 'Build & Release', link: '/docs/06-build-release' },
           { text: 'Analytics Events', link: '/docs/07-analytics-events' },
           { text: 'Troubleshooting', link: '/docs/08-troubleshooting' },
