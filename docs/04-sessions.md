@@ -14,8 +14,10 @@ Role-play with an AI coach in character (interviewer, scrum lead, client, negoti
 | --- | --- |
 | Content | **125+ scenarios across 10 paths:** 🎯 Interviews (16) · ☀️ Meetings (14) · 📊 Presentations (12) · ☕ Small talk (10) · 💸 Negotiation (12) · 📞 Client calls (13) · 🌡️ Difficult conversations (12) · 🧭 Leadership (12) · 🤝 Networking (10) · 🚀 Career growth (10) |
 | Per-session options | **Length** 5/10/15 min · **Difficulty** Easy/Realistic/Hard (changes coach speed, vocabulary and pushback) · **Coach speed** 0.8×/1×/1.2× |
-| Modes | **Voice** (dark call UI, hands-free VAD optional) and **Chat** (typed) — switchable mid-session |
-| In-session help | 💡 Hint button (a whisper-phrase you could say next) · live captions toggle (captions grow in sync with the coach's voice) · barge-in |
+| Modes | **Voice** (dark call UI) and **Chat** (typed) — switchable mid-session |
+| Conversation flow | **Continuous by default** (hands-free): the mic stays hot the whole call — speak to take your turn, pause to hand it back, and talk over the coach to interrupt (echo-cancelled VoiceChat session). Tap-to-talk remains as fallback and in Expo Go |
+| In-session help | 💡 Hint button (a whisper-phrase you could say next) · live captions toggle · barge-in (by voice or tap) |
+| Captions | Reveal **word by word**, paced to the sentence's actual speech time (no reading ahead); every word is tappable → in-language definition + translation + one-tap save to the word bank |
 | Jargon glossary | Coaching terms (STAR method, hedging, anchoring…) render dotted-underlined in briefs, drills and lesson lists — tap for a plain-words explanation in the app language; the CEFR badge on Progress explains the level ladder |
 | Audio routing | Coach audio plays through the loudspeaker (or Bluetooth headset) — the mic session is configured with `DefaultToSpeaker` so starting a turn never re-routes playback to the phone-call earpiece |
 | Personalization | Recommendation tuned by profession + goal; coach adapts to the user's CEFR level; Settings → People renames coaches after real coworkers |
