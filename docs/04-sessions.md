@@ -1,6 +1,6 @@
 # Sessions & Practice Modes
 
-Everything a user can practice today — **6 modes, 125+ catalog scenarios, 18 drills, 10 group rooms, plus unlimited AI-generated custom scenarios** — and the planned expansions.
+Everything a user can practice today — **7 modes, 125+ catalog scenarios, 18 drills, 10 group rooms, personalized weakness workouts, plus unlimited AI-generated custom scenarios** — and the planned expansions.
 
 > **Why users don't repeat themselves:** every 1:1 session is generated live by the coach model (no two conversations are the same), the catalog spans 10 professional situations at 3 difficulty levels and 3 lengths, and the custom-scenario builder turns any real upcoming moment ("my sprint review on Friday") into a rehearsal — effectively infinite content.
 
@@ -40,7 +40,19 @@ Role-play with an AI coach in character (interviewer, scrum lead, client, negoti
 | Vocabulary & precision | 📖 My words · 🔗 Linking words · 🔢 Numbers & data · 🔤 Spelling & codes |
 | Sound natural | 🎵 Word & sentence stress · ⚖️ Opinions with hedging · 🪞 Active listening & paraphrasing · 📖 Story hooks · ⭐ STAR stories |
 
-### 4 · Group practice rooms (10)
+### 4 · Weakness workouts (personalized, generated)
+
+An 8-round interactive training game generated from the learner's **own
+session mistakes**, unmastered words and level (`POST /training/session`).
+Four exercise types: **fix the sentence** (multiple choice), **fill the gap**,
+**put it in order** (word chips) and **say it out loud** (recorded and scored
+against the target). Instant right/wrong feedback with explanations in the
+app language, combo streaks with haptics, and a results ring at the end.
+Entry points: the weakness cards on Progress ("Train · 5 min") and the
+"Train your weak spots" card on Practice. Completed workouts log a training
+session so the minutes count toward streaks.
+
+### 5 · Group practice rooms (10)
 
 Turn-based rooms with AI teammates; user turns recorded and scored.
 
@@ -57,11 +69,11 @@ Turn-based rooms with AI teammates; user turns recorded and scored.
 | 🚨 Incident postmortem | Narrating a timeline without blame |
 | 🥂 Networking mixer | Three strangers, three conversations |
 
-### 5 · Level assessment
+### 6 · Level assessment
 
 4 spoken interview-style questions → CEFR estimate + skill breakdown + takeaways. Free, repeatable, feeds the personalized plan.
 
-### 6 · Writing coach
+### 7 · Writing coach
 
 Paste a draft (Slack / Email / PR review / Proposal), pick a tone (Friendly / Formal / Direct / Concise) → rewrite + up to 3 explained changes.
 
