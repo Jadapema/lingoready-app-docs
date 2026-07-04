@@ -15,8 +15,10 @@ Role-play with an AI coach in character (interviewer, scrum lead, client, negoti
 | Content | **125+ scenarios across 10 paths:** 🎯 Interviews (16) · ☀️ Meetings (14) · 📊 Presentations (12) · ☕ Small talk (10) · 💸 Negotiation (12) · 📞 Client calls (13) · 🌡️ Difficult conversations (12) · 🧭 Leadership (12) · 🤝 Networking (10) · 🚀 Career growth (10) |
 | Per-session options | **Length** 5/10/15 min · **Difficulty** Easy/Realistic/Hard (changes coach speed, vocabulary and pushback) · **Coach speed** 0.8×/1×/1.2× |
 | Modes | **Voice** (dark call UI, hands-free VAD optional) and **Chat** (typed) — switchable mid-session |
-| In-session help | 💡 Hint button (a whisper-phrase you could say next) · live captions toggle · barge-in |
-| Personalization | Recommendation tuned by profession + goal; coach adapts to the user's CEFR level |
+| In-session help | 💡 Hint button (a whisper-phrase you could say next) · live captions toggle (captions grow in sync with the coach's voice) · barge-in |
+| Jargon glossary | Coaching terms (STAR method, hedging, anchoring…) render dotted-underlined in briefs, drills and lesson lists — tap for a plain-words explanation in the app language; the CEFR badge on Progress explains the level ladder |
+| Audio routing | Coach audio plays through the loudspeaker (or Bluetooth headset) — the mic session is configured with `DefaultToSpeaker` so starting a turn never re-routes playback to the phone-call earpiece |
+| Personalization | Recommendation tuned by profession + goal; coach adapts to the user's CEFR level; Settings → People renames coaches after real coworkers |
 | Feedback | Post-session report: 0–100 score, per-skill bars, the 2 highest-impact fixes, what went well, suggested vocabulary — plus full **transcript replay** |
 | Limits | Free: first 3 lessons per path + 20 speaking min/month · Pro: unlimited |
 | Latency posture | STT partials while speaking (Deepgram), LLM reply streams token-by-token, TTS speaks sentence-by-sentence |
