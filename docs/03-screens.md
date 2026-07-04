@@ -42,7 +42,7 @@ Route = file under `app/` (Expo Router). States listed where they differ from th
 | `/drill/[id]` | Quick drill | Rounds with dots, scoring spinner, per-round metrics + feedback, completion summary (avg wpm, total fillers) |
 | `/group/lobby` | Group lobby | Format switcher (4 rooms), cast avatars, host quote, win conditions |
 | `/group/[id]` | Group room | Participant tiles (speaking glow), scripted lines with timing, your-turn strip, scored user turns, wrap state |
-| `/writing` | Writing coach | Channel + tone chips, draft input, loading, rewrite card with Copy, explained changes |
+| `/writing` | Writing coach | 6 channels + 6 tone chips, draft input with counter, draft score ring + strengths, rewrite card with Copy, explained changes (in the UI language), quick re-runs, recent-drafts history |
 
 ## Money & settings
 
@@ -52,7 +52,8 @@ Route = file under `app/` (Expo Router). States listed where they differ from th
 | `/settings/account` | Account | Identity details |
 | `/settings/language` | App language | 6 options |
 | `/settings/appearance` | Appearance | Light/Dark/System previews with checkmarks |
-| `/settings/reminders` | Reminders | Time picker chips, 3 notification toggles, permission request on save |
+| `/settings/reminders` | Reminders | Free hour:minute wheel picker + quick-time chips, 3 persisted notification toggles, permission request on save |
+| `/settings/people` | People | Rename any coach/room participant after a real coworker, set role + gendered voice with preview; applied in sessions, group rooms and Home |
 | `/settings/help` | Help & FAQ | Accordion answers, contact (mail) |
 | `/settings/terms` | Terms & privacy | Plain-words summary + document list |
 | `/settings/delete-account` | Delete account | Consequence list, destructive + escape CTAs, real API delete |
