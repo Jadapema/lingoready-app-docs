@@ -15,6 +15,10 @@ All notable changes to the mobile app. Dates are release-branch dates.
 - Tapping the orb replaces the mic button in hands-free mode (interrupt / hand back the turn); the big mic button remains for tap-to-talk.
 - "Pause before replying" (Fast/Normal/Relaxed) now drives the **server's** endpointing pace instead of only the local timer.
 
+### Fixed
+- **Hands-free stayed off on older installs**: the setting flipped to on-by-default weeks ago, but persisted stores kept the old value forever — a one-time store migration re-asserts it.
+- **A transient mic failure downgraded the whole session to tap-to-talk**: the live PCM recorder now retries before falling back to file mode, the session screen re-checks the mic permission, and a successful PCM turn automatically re-engages the always-on mic.
+
 ## [0.9.0] — 2026-07-04
 
 ### Added
